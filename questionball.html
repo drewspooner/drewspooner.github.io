@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>  
+<html>
+    
+<link href="css/main.css" rel="stylesheet" >
+<link href="css/menubar.css" rel="stylesheet" >
+    
+<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" />
+    
+<style>
+    textarea {
+        resize: vertical;
+        font-family: "Rubik", sans-serif;
+    }    
+</style>
+  
+<head>  
+    <title>  
+        Question Ball
+    </title> 
+</head>
+  
+<body style = "text-align:center;">  
+      
+    <h1 style = "color:green;">  
+        Question Ball 
+    </h1>  
+      
+    
+      
+    <button id = "button" onclick = "GFG_Fun()">  
+        New Question
+    </button>  
+      
+    <p id = "GFG_DOWN" style =  
+        "font-size: 24px; font-weight: bold; color: green;">  
+        Press the button to get a question.
+    </p>
+    
+    <hr>
+    <div class="submit">
+        <h3>Input questions here, each separated by a line.</h3>
+        <textarea id="area" name="w3review" rows="4" cols="75">
+If you could be anything when you grew up, what would you be?
+If you could be any animal what would you be?
+If you had a baby dinosaur, what would you feed it?
+What’s your favorite movie?
+What’s your favorite song?
+Who is your favorite celebrity?
+What qualities do you look for in a friend?
+If you could travel anywhere, where would you go?
+What’s your favorite sport?
+Who is someone you admire and why?
+What do you like to do during summer vacation?
+When you were a little kid, what did you want to do when you grew up?
+What’s your favorite book? 
+        </textarea>
+    </div>
+    
+      
+    <script>  
+        var up = document.getElementById('GFG_UP');  
+        var down = document.getElementById('GFG_DOWN');  
+        
+         
+          
+        
+          
+        function GFG_Fun() { 
+            var area = document.getElementById("area");             
+            var arr = area.value.replace(/\r\n/g,"\n").split("\n");  
+            var question =arr[Math.floor(Math.random() * arr.length)]; 
+            if(question.length>0){
+                down.innerHTML =  question;
+            }
+            else{
+                GFG_Fun();
+            }
+        }  
+    </script>  
+</body>  
+  
+</html>
