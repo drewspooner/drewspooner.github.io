@@ -47,6 +47,10 @@ h1{
     color: #ffffff;
     letter-spacing: 0.45rem;
     font-weight: 700;
+    
+}
+
+.rotateH{
     animation-name: load;
     animation-duration: 2s;
 }
@@ -99,6 +103,18 @@ h1{
 
 .upwork:hover{
     background-color: #00a72d;
+    font-size: 107%;
+}
+
+.redb{
+    border-radius: 4px;
+    background-color: #fb4f4f;
+    border-left: 4px solid #ff8080;
+    border-bottom: 4px solid #d84242;
+}
+
+.redb:hover{
+    background-color: #cb4747;
     font-size: 107%;
 }
 
