@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/newhome.css" rel="stylesheet" >
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" >
@@ -9,112 +9,6 @@
     
 
 
-    
-    
-
-    
-    
-    <style>
-    .content{
-        margin: auto;
-        padding: auto;
-        align-content: center;
-        width: 100%;
-    }
-
-    /* Skill Bar Tutorial from w3schools
-        https://www.w3schools.com/howto/howto_css_skill_bar.asp */
-
-        *{box-sizing:content-box}
-
-        .container{
-            width=100%;
-            background-color: #ddd;
-        }
-
-        .skills {
-            text-align: right;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            color: black;
-        }
-        .cpp {
-            width: 70%; 
-            background-color: #fbc93d;
-        }
-        .psd {
-            width: 90%; 
-            background-color: #6cc0e5;
-
-    }
-        .sql {
-            width: 40%; 
-            background-color: #fbc93d;
-    }
-        .indd {
-            width: 80%; 
-            background-color: #ff7034;
-    }
-        .java {
-            width: 70%; 
-            background-color: #fb4f4f; 
-    }
-
-        .webd {
-            width: 60%; 
-            background-color: #fb4f4f;  
-    }
-
-    .sec{
-        margin-bottom: 3em;
-    }
-
-    .rtitle{
-        font-size: 30pt;
-        padding: 1em;
-        text-align: center;
-    }
-
-    .titleh{
-        color: black;
-        font-size: 108%;
-        margin-bottom: .5em;
-    }
-    .subtitle{
-        padding: -1em;
-        margin: 0.2em 1em 0.2em 1em;
-        color: #5f5f5f;
-    }
-        
-        .century{
-            color: navy;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        
-        .fishCamp{
-            color: red;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        
-        .rec{
-            color: #500000;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        
-        a:hover{
-            color: black;
-            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.29);
-        }
-        
-        .red{
-            color: #fb4f4f;
-        }
-
-    
-    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script>
@@ -156,7 +50,13 @@
             });
             
             $('#hide').click(function(){
-
+                var resButton = new $('#hide').text();
+                if (resButton == "View Resume"){
+                    $('#hide').text("Hide Resume");
+                } else{
+                    $('#hide').text("View Resume");
+                }
+                
                 $('#resumeSec').fadeToggle('fast');
             });
             
